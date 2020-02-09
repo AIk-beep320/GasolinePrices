@@ -3,8 +3,13 @@ title: "FoRECASTING GASOLINE PRICES IN OHIO"
 author: "Ikya"
 output:
   html_document: default
-  word_document: default
 ---
+
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 
 This project focusses on time series modeling approaches to predict the gasoline prices in Ohio for a short period of time. Modeling has been performed on the monthly data from the year 2004 to 2016 and forecast is obtained for the year 2017 i.e., 12 months, which is then compared with the actual values.  
 
